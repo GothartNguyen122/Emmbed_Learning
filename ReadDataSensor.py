@@ -2,7 +2,6 @@ import serial
 import csv
 import time
 import os
-
 # Cấu hình Serial
 SERIAL_PORT = 'COM5'
 BAUD_RATE = 115200
