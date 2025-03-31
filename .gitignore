@@ -7,6 +7,7 @@ Desktop.ini
 *.iml
 /Android_App/.idea/
 /Android_App/.idea/*
+.idea
 
 # 🛑 Loại trừ file cấu hình cá nhân
 /Android_App/local.properties
@@ -33,3 +34,5 @@ Desktop.ini
 *.log
 /Android_App/crashlytics-build.properties
 /Android_App/fabric/proguard-rules.pro
+
+*.txt
