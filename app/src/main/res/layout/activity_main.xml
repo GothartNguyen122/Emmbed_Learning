@@ -1,0 +1,109 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="3"
+    android:padding="16dp"
+    android:id="@+id/main"
+    android:background="@android:color/holo_red_dark">
+
+    <!-- Thành phần 1: Hình ảnh cảnh báo và tiêu đề -->
+    <LinearLayout
+        android:id="@+id/warning_layout"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/warning_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@android:drawable/ic_dialog_alert" />
+
+        <TextView
+            android:id="@+id/danger_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dangerous"
+            android:textSize="24sp"
+            android:textColor="@android:color/white"
+            android:layout_marginStart="10dp" />
+    </LinearLayout>
+
+    <!-- Thành phần 2: Bảng chứa 4 chỉ số -->
+    <TableLayout
+        android:id="@+id/sensor_table"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.85"
+        android:stretchColumns="*">
+
+        <TableRow>
+            <TextView android:text="Thông số" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold" />
+            <TextView android:text="Giá trị" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Voltage" android:textColor="@android:color/white" android:padding="8dp" />
+            <TextView android:id="@+id/vol_value"  android:textColor="@android:color/white" android:padding="8dp" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Nhiệt độ" android:textColor="@android:color/white" android:padding="8dp" />
+            <TextView android:id="@+id/temperature_value"  android:textColor="@android:color/white" android:padding="8dp" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Áp suất" android:textColor="@android:color/white" android:padding="8dp" />
+            <TextView android:id="@+id/pressure_value"  android:textColor="@android:color/white" android:padding="8dp" />
+        </TableRow>
+        <TableRow>
+            <TextView android:text="Độ ẩm" android:textColor="@android:color/white" android:padding="8dp" />
+            <TextView android:id="@+id/humidity_value" android:textColor="@android:color/white" android:padding="8dp" />
+        </TableRow>
+    </TableLayout>
+
+    <!-- Thành phần 3: Lịch sử dữ liệu -->
+    <TableLayout
+        android:id="@+id/header_table"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="*"
+        android:background="@android:color/darker_gray">
+
+        <TableRow>
+            <TextView android:text="Thời gian" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>
+            <TextView android:text="Voltage" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>
+            <TextView android:text="Nhiệt độ" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>
+            <TextView android:text="Áp suất" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>
+            <TextView android:text="Độ ẩm" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableLayout
+                android:id="@+id/history_table"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*">
+
+<!--                <TableRow>-->
+<!--                    <TextView android:text="Thời gian" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>-->
+<!--                    <TextView android:text="Voltage" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>-->
+<!--                    <TextView android:text="Nhiệt độ" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>-->
+<!--                    <TextView android:text="Áp suất" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>-->
+<!--                    <TextView android:text="Độ ẩm" android:textColor="@android:color/white" android:padding="8dp" android:textStyle="bold"/>-->
+<!--                </TableRow>-->
+
+            </TableLayout>
+        </HorizontalScrollView>
+    </ScrollView>
+</LinearLayout>
