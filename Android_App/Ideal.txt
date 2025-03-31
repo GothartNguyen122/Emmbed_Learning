@@ -1,0 +1,11 @@
+-Gửi dữ liệu từ ESP32 bằng MQTT 
+
+-Ý tưởng : gửi dữ liệu từ ESP32 bằng MQTT cho android nhận.
+ + Đồng thời Android vừa hiện thị dữ liệu lên cho user xem & lưu dữ liệu vào Firestore .
+ + Khi cần truy cập lại lịch sử thì ESP32 lấy từ Firestore.
+
+ESP32 gửi dữ liệu lên MQTT (real-time cho Android).
+Một Cloud Function hoặc Android service lắng nghe MQTT và lưu dữ liệu vào Firebase Firestore (để lưu trữ lâu dài).
+Android vừa lắng nghe MQTT để hiển thị ngay lập tức, vừa có thể truy vấn Firestore khi cần xem lịch sử.
+
+- Quản lý các Task :

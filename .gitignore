@@ -1,0 +1,35 @@
+# 🛑 Loại trừ file hệ thống & IDE cache
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# 🛑 Loại trừ file của Android Studio
+*.iml
+/Android_App/.idea/
+/Android_App/.idea/*
+
+# 🛑 Loại trừ file cấu hình cá nhân
+/Android_App/local.properties
+
+# 🛑 Loại trừ thư mục build của tất cả module (app, library, feature)
+*/build/
+*/out/
+.cxx
+.externalNativeBuild
+
+# 🛑 Loại trừ file của Firebase & Google Services (tránh lộ API key)
+/Android_App/app/google-services.json
+*.keystore
+*.jks
+
+# 🛑 Loại trừ file của Gradle
+/Android_App/.gradle/
+/Android_App/gradle/
+/Android_App/gradlew
+/Android_App/gradlew.bat
+/Android_App/gradle-wrapper.jar
+
+# 🛑 Loại trừ file log & debug
+*.log
+/Android_App/crashlytics-build.properties
+/Android_App/fabric/proguard-rules.pro
